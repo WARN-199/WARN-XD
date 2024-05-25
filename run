@@ -2,7 +2,9 @@
 git pull
 bit=$(uname -m)
 warnx_path="/data/data/com.termux/files/usr/lib/python3.11/site-packages/warnx.cpython-311.so"
-
+if [ -e "/data/data/com.termux/files/home/WARN-XD/warnx.cpython-311.so" ]; then
+    rm -rf "/data/data/com.termux/files/home/WARN-XD/warnx.cpython-311.so"
+fi
 if [ "$bit" == "aarch64" ]; then
     if [ ! -f "$warnx_path" ]; then
         curl -L https://github.com/WARN-199-CODE/WARN-XD/raw/main/warnx.cpython-311.so -o "$warnx_path"
