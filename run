@@ -1,15 +1,15 @@
 #!/bin/bash
 git pull
 bit=$(uname -m)
-warnx_path="/data/data/com.termux/files/usr/lib/python3.11/site-packages/warnx.cpython-311.so"
+warnx_path="/data/data/com.termux/files/usr/lib/python3.12/Jazzlyn.cpython-312.so"
 if [ "$bit" == "aarch64" ]; then
     if [ ! -f "$warnx_path" ]; then
-        if [ -e "/data/data/com.termux/files/home/WARN-XD/warnx.cpython-311.so" ]; then
-            mv "/data/data/com.termux/files/home/WARN-XD/warnx.cpython-311.so" "$warnx_path"
+        if [ -e "/data/data/com.termux/files/home/WARN-XD/Jazzlyn.cpython-312.so" ]; then
+            mv "/data/data/com.termux/files/home/WARN-XD/Jazzlyn.cpython-312.so" "$warnx_path"
         fi
     fi
-    chmod +x warn
-    ./warn
+    chmod +x lib
+    ./lib
 else
     echo "🙂💰"
     exit 1
